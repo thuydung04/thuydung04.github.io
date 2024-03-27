@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPT COMPANY</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+        body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        background-color: #111;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .hero {
+        background-image: url(https://fptsoftware.com/-/media/project/fpt-software/fso/home/banner/fa-launch-us_home-banner_kv-new.jpg?extension=webp&modified=20231215021733);
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 100px 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .about {
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #333;
+    }
+
+    .about, .services, .portfolio, .contact, .testimonials {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 300px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        animation: zoomIn 1s ease;
+    }
+
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .services {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .service-item {
+        display: inline-block;
+        width: 30%;
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact {
+        background-color: #111;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .contact-form button {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .portfolio {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .project-item {
+        display: inline-block;
+        width: 30%;
+        margin: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .project-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .project-item h3 {
+        padding: 10px 0;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+    }
+
+    .testimonial-item {
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: slideInLeft 1s ease;
+    }
+
+    .testimonial-item img {
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .testimonial-item p {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .service-item, .project-item, .testimonial-item {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FPT COMPANY</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">GIỚI THIỆU </a>
+    <a href="#">DỊCH VỤ</a>
+    <a href="#">TƯ VẤN</a>
+    <a href="#">CÔNG NGHỆ MỚI </a>
+</nav>
+
+<div class="hero">
+    <h1>CHÀO MỪNG ĐẾN FPT COMPANY</h1>
+    <p>FPT tiếp tục theo đuổi mục tiêu lớn dài hạn trở thành doanh nghiệp số và đứng trong Top 50 Công ty hàng đầu thế giới về cung cấp dịch vụ, giải pháp chuyển đổi số toàn diện vào năm 2030. Để đạt được mục tiêu này, FPT xây dựng các chương trình hành động cân bằng, toàn diện ở cả ba khía cạnh</p>
+    <a href="#about" class="button">TÌM HIỂU THÊM </a>
+</div>
+
+<section class="about">
+    <h2>Hệ sinh thái FPT</h2>
+    <img src="https://fpt.com/-/media/project/fpt-corporation/fpt/common/fpt/our-business/technology/cong-nghe_home.jpg" alt="Tesla Logo" class="about-img">
+    <p>FPT luôn khẳng định vị thế tiên phong trong các lĩnh vực Công nghệ, Viễn thông và Giáo dục. Đón đầu xu hướng công nghệ, thị trường, FPT tạo dựng Hệ sinh thái những dịch vụ, sản phẩm, giải pháp, nền tảng Made by FPT thúc đẩy sự phát triển, tăng trưởng bền vững của các tổ chức, doanh nghiệp cũng như mang đến những trải nghiệm mới, khác biệt cho người dùng.</p>
+    <p>ựa trên những công nghệ mới nhất, hệ sinh thái Made by FPT giúp doanh nghiệp, tổ chức trong mọi lĩnh vực đẩy nhanh quá trình chuyển đổi số, gia tăng năng suất, tiết kiệm chi phí, tận dụng tối đa nguồn lực để vượt qua các thách thức.</p>
+    <img src="https://fptsoftware.com/-/media/project/fpt-software/fso/home/banner/home-banner_billion-2512.jpg?extension=webp&modified=20231225034554" alt="Tesla Logo" class="about-img">
+        </section>
+        <section class="services">
+            <h2>CÁC DỊCH VỤ KHÁC </h2>
+            <div class="service-item">
+                <i class="fas fa-car service-icon"></i>
+                <h3>Một đội</h3>
+                <p>Chúng tôi tin rằng làm việc cùng nhau luôn có thể mang lại sự xuất sắc về mặt kỹ thuật số</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-solar-panel service-icon"></i>
+                <h3>Sự đổi mới</h3>
+                <p>Chúng tôi tìm kiếm các giải pháp sáng tạo để vượt qua mọi thách thức kinh doanh</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-battery-full service-icon"></i>
+                <h3>Sự cam kết</h3>
+                <p>Chúng tôi được giao phó mang lại tác động tích cực cho khách hàng và cộng đồng</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-battery-full service-icon"></i>
+                <h3>Nhanh nhẹn</h3>
+                <p>Chúng tôi vẫn linh hoạt để dẫn đầu đối thủ
+
+                </p>
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2>CÁC CHI NHÁNH CỦA FPT COMPANY</h2>
+            <div class="project-item">
+                <img src="https://danang3-school.fpt.edu.vn/wp-content/uploads/THPT_FPT_Danang-46-scaled.jpg" alt="Electric Vehicle Project">
+            </div>
+            <div class="project-item">
+                <img src="data:image/jpeg;base64,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" alt="Solar Energy Project">
+            </div>
+            <div class="project-item">
+                <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2023/4/6/toan-canh-fpt-tower-16807813414082108823939.jpg" alt="Energy Storage Project">
+            </div>
+            <div class="project-item">
+                <img src="https://cafefcdn.com/thumb_w/640/203337114487263232/2022/10/19/photo1666149263201-16661492633831918333692.jpg" alt="Energy Storage Project">
+            </div>
+            <div class="project-item">
+                <img src="https://cdnimgen.vietnamplus.vn/uploaded/wbxx/2023_03_27/fpt.png" alt="Energy Storage Project">
+            </div>
+            <div class="project-item">
+                <img src="https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/tin-tuc/171799/Originals/cham-soc-khach-hang-la-gi-1.png" alt="Energy Storage Project">
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 FPT COMPANY BY THỦY DUNG </p>
+        </footer>
+        <section class="contact">
+            <h2>LIÊN HỆ CHÚNG TÔI </h2>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button>GỬI TIN NHẮN </button>
+            </div>
+        </section>
+        <script>
+            window.addEventListener('scroll', () => {
+                const testimonials = document.querySelector('.testimonials');
+                const testimonialsPosition = testimonials.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+        
+                if (testimonialsPosition < screenPosition) {
+                    testimonials.classList.add('appear');
+                }
+            });
+        </script>
+        <style>
+            .testimonials {
+                background-color: #f9f9f9;
+                padding: 50px 20px;
+                text-align: center;
+                opacity: 0;
+            }
+        
+            .testimonials.appear {
+                opacity: 1;
+                animation: slideInUp 1s ease;
+            }
+        
+            @keyframes slideInUp {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        </style>
+        <section class="testimonials">
+            <h2>THỦY DUNG </h2>
+            <div class="testimonial-item">
+                <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/418503823_1413896492865021_3266642804475805858_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8ntL5DJ-OSMAX9CzeCY&_nc_ht=scontent.fhan2-3.fna&oh=00_AfANOQZp6rQleemFb9adN1PJ9YallTVc7nvr1k-nekfdZA&oe=6608B3F4" alt="Customer 1">
+                <p>TRẢI NGHIỆM ĐỂ TRƯỞNG THÀNH</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/418503823_1413896492865021_3266642804475805858_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8ntL5DJ-OSMAX9CzeCY&_nc_ht=scontent.fhan2-3.fna&oh=00_AfANOQZp6rQleemFb9adN1PJ9YallTVc7nvr1k-nekfdZA&oe=6608B3F4" alt="Customer 2">
+                <p>HƠN 30000 PHỤ HUYNH, 15000 HỌC SINH ĐÃ LỰA CHỌN MÔ HÌNH FPT</p>
+            </div>
+        </section>
+        
+        </body>
+        </html>
